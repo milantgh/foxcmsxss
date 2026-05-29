@@ -13,10 +13,11 @@ Credits: westsec Security Team!
 
 Project Repository:
 
-https://gitee.com/qianfox/foxcms
+[https://gitee.com/qianfox/foxcms](https://gitee.com/qianfox/foxcms)
 
-[https://github.com/qianfox/foxcms](https://gitee.com/qianfox/foxcms)Official
-Demo/Blog URL: [https://www.foxcms.cn](https://www.foxcms.cn/)
+[https://github.com/qianfox/foxcms](https://github.com/qianfox/foxcms)
+
+OfficialDemo/Blog URL: [https://www.foxcms.cn](https://www.foxcms.cn/)
 
 Project Description: \"FoxCMS (Qianhu Content Management System) is a
 high-efficiency cross-platform CMS developed based on PHP+MySQL,
@@ -29,7 +30,7 @@ Version Number: v1.2.61 (Latest stable release)
 
 Release Page: <https://gitee.com/qianfox/foxcms.git>
 
-2.FoxCMS Installation Prerequisite
+2.  FoxCMS Installation Prerequisite
 
 FoxCMS v1.2.61 requires the source code to be placed in the root
 directory of the web server (www) for successful installation. Placing
@@ -70,7 +71,7 @@ required,url like this:
 
 <http://192.168.219.183/index.php/admin4883/login/index.html>
 
-3.Vulnerability Proof Process
+3.  Vulnerability Proof Process
 
 XSS - Cross-Site Scripting Attack: Unrestricted Upload of SVG with XSS
 -\> Stored XSS.
